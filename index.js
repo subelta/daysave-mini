@@ -1,8 +1,16 @@
 const TelegramBot = require('node-telegram-bot-api');
+const Agent = require('socks5-https-client/lib/Agent');
+const token = 'YOUR_TOKEN';
 
-const token = 'TOKEN';
-
-const bot = new TelegramBot(token, { polling: true });
+const bot = new TelegramBot(token, { polling: true,
+        request: {
+            agentClass: Agent,
+            agentOptions: {
+                socksHost: '78.46.200.216',
+                socksPort: '12171'
+            }
+        }
+    });
 
 // Matches "/echo [whatever]"
 bot.onText(/\/echo (.+)/, (msg, match) => {
