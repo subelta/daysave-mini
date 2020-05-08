@@ -1,8 +1,8 @@
-const TelegramBot = require('node-telegram-bot-api');
-const Agent = require('socks5-https-client/lib/Agent');
-const token = 'YOUR_TOKEN';
+import TelegramBot from 'node-telegram-bot-api';
+import Agent from 'socks5-https-client/lib/Agent.js';
+import { TOKEN } from './config.js';
 
-const bot = new TelegramBot(token, { polling: true,
+const bot = new TelegramBot(TOKEN, { polling: true,
         request: {
             agentClass: Agent,
             agentOptions: {

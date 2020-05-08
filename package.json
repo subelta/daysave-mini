@@ -1,5 +1,6 @@
 {
   "name": "daysave-mini",
+  "type": "module",
   "version": "1.0.0",
   "description": "Telegram bot for logging things",
   "main": "index.js",
