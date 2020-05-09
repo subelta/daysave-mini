@@ -2,6 +2,7 @@ import TelegramBot from 'node-telegram-bot-api';
 import Agent from 'socks5-https-client/lib/Agent.js';
 
 import { TOKEN } from '../config.js';
+import { PROXY_HOST, PROXY_PORT } from '../config.js';
 
 const bot = new TelegramBot(
 	TOKEN,
@@ -10,8 +11,8 @@ const bot = new TelegramBot(
 		request: {
 			agentClass: Agent,
 			agentOptions: {
-				socksHost: '78.46.200.216',
-				socksPort: '12171'
+				socksHost: PROXY_HOST,
+				socksPort: PROXY_PORT,
 			}
 		}
 	}
