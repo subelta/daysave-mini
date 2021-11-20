@@ -1,18 +1,16 @@
 {
   "name": "daysave-mini",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Telegram bot for logging things",
-  "main": "src/index.js",
   "repository": "git@github.com:subelta/daysave-mini.git",
   "author": "subelta <atomicmaize@gmail.com>",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "node-telegram-bot-api": "^0.40.0",
-    "socks5-https-client": "^1.2.1"
+    "node-telegram-bot-api": "^0.54.0"
   },
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "eslint": "^8.2.0"
   }
 }

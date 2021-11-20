@@ -1,22 +1,7 @@
 import TelegramBot from 'node-telegram-bot-api';
-import Agent from 'socks5-https-client/lib/Agent.js';
-
 import { TOKEN } from '../config.js';
-import { PROXY_HOST, PROXY_PORT } from '../config.js';
 
-const bot = new TelegramBot(
-	TOKEN,
-	{
-		polling: true,
-		request: {
-			agentClass: Agent,
-			agentOptions: {
-				socksHost: PROXY_HOST,
-				socksPort: PROXY_PORT,
-			}
-		}
-	}
-);
+const bot = new TelegramBot(TOKEN, { polling: true });
 
 bot.onText(/\/echo (.+)/, (msg, match) => {
 	const chatId = msg.chat.id;
